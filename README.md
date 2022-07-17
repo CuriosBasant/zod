@@ -1287,7 +1287,7 @@ const numberPromise = z.promise(z.number());
 numberPromise.parse("tuna");
 // ZodError: Non-Promise type: string
 
-numberPromise.parse(Promise.resolve("tuna"));
+numberPromise.parse(Promise.resolve(10));
 // => Promise<number>
 
 const test = async () => {
